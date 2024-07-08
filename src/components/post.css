@@ -1,0 +1,48 @@
+.post{
+    color:black;
+    border:2px solid black;
+    border-color:black;
+    margin:20px;
+    padding:20px;
+    border-radius:20px;
+    background-color: white;
+    
+}
+.card{
+    border-radius: 10px;
+}
+.button{
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+    color:black;
+    background-color: #00c8ffea;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+    transition: transform 1s;
+}
+
+  .button::before {
+    content: '';
+    position: absolute;
+    border-radius: 5px;
+  
+    background-size: 100% 100%;
+    animation: shine 3s linear infinite;
+    z-index: -1;
+  }
+  @keyframes shine {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .button:hover {
+    transform: rotate(720deg);
+  }
